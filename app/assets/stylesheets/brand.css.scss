@@ -1,0 +1,48 @@
+@font-face{
+    font: {
+       family: 'Days';
+       weight: 'normal';
+       style: 'normal';
+    } 
+	src: asset-url('days.eot', font);
+	src: asset-url('days.eot?#iefix', font) format('embedded-opentype'),
+	     asset-url('days.woff', font) format('woff'),
+	     asset-url('days.ttf', font) format('truetype'),
+	     asset-url('days.svg#webfont', font) format('svg');
+}
+
+@font-face{
+    font: {
+       family: 'Vera';
+       weight: 'normal';
+       style: 'normal';
+    } 
+	src: asset-url('vera.eot', font);
+	src: asset-url('vera.eot?#iefix', font) format('embedded-opentype'),
+	     asset-url('vera.woff', font) format('woff'),
+	     asset-url('vera.ttf', font) format('truetype'),
+	     asset-url('vera.svg#webfont', font) format('svg');
+}
+
+@font-face{
+    font: {
+       family: 'Bebas';
+       weight: 'normal';
+       style: 'normal';
+    } 
+	src: asset-url('bebas.eot', font);
+	src: asset-url('bebas.eot?#iefix', font) format('embedded-opentype'),
+	     asset-url('bebas.woff', font) format('woff'),
+	     asset-url('bebas.ttf', font) format('truetype'),
+	     asset-url('bebas.svg#webfont', font) format('svg');
+}
+
+$heading-font: "Days", 'Verdana', 'Arial', sans-serif;
+$accent-font: "Bebas", 'Georgia', "Times New Roman", sans-serif;
+$body-font: "Vera", 'Times New Roman', 'Times', serif;
+
+$white: #fff;
+$satin: #C9D1D3;
+$highlight: #ffc;
+$silver: #F7F7F7;
+$black: #000;

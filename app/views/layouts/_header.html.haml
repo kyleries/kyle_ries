@@ -1,6 +1,19 @@
-%header= link_to "Link 1", '#', id: "logo"
-%nav
-  %ul
-    %li= link_to "Link 2",    '#'
-    %li= link_to "Link 3",    '#'
-    %li= link_to "Link 4", '#'
+%header
+  .top
+    = link_to "Kyle Ries", root_path, id: "logo"
+    %nav
+      %ul#main
+        %li= link_to "Contact", contact_path
+        %li= link_to "Skills", skills_path
+        %li= link_to "Profiles", profiles_path
+  %h1.mid RAILS DEVELOPER +
+  %h2 Knowledge, experience, and expertise in the rest of the Rails Ecosystem.
+  .bottom
+    %ul#skills
+      %li= link_to image_tag( 'html5.png'), skills_path
+      %li= link_to image_tag( 'haml.png'), skills_path
+      %li= link_to image_tag( 'rspec.png'), skills_path
+      %li= link_to image_tag( 'sass.png'), skills_path
+      %li= link_to image_tag( 'git.png'), skills_path
+      %li= link_to image_tag( 'heroku.png'), skills_path
+      %li= link_to image_tag( 'coffee-script.png'), skills_path

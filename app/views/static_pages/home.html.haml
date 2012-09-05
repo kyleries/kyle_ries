@@ -1,1 +1,53 @@
-Hello world!
+:javascript
+  $(document).ready(function() {	
+    $('.iosSlider').iosSlider({
+      scrollbar: true,
+      snapToChildren: true,
+      desktopClickDrag: true,
+      scrollbarMargin: '5px 40px 0 40px',
+      scrollbarBorderRadius: 0,
+      scrollbarHeight: '2px',
+      navPrevSelector: $('.prevButton'),
+      navNextSelector: $('.nextButton')
+    });
+  });
+
+%h3 Check out my work...
+		
+.iosSlider
+  .slider
+    .item#item1
+      .image
+        .bg
+      .text
+        .bg
+        .title
+          %span Bloominations
+        .desc
+          %span Bloominations needed a redesign that exemplified their unique products.
+        .button
+          %span Visit the Site &rsaquo;
+    .item#item2
+      .image
+        .bg
+      .text
+        .bg
+        .title
+          %span A Quality Home Inspection
+        .desc
+          %span Entering a crowded market, AQHI needed a digital partner to design and develop the site and bring business their way.
+        .button
+          %span Visit the Site &rsaquo;
+    .item#item3
+      .image
+        .bg
+      .text
+        .bg
+        .title
+          %span StairMeister
+        .desc
+          %span StairMeister creates some of the most amazing log staircases in the world, and they needed a website to reflect that level of quality and sophistication.
+        .button
+          %span Visit the Site &rsaquo;
+  .prevButton
+  .nextButton

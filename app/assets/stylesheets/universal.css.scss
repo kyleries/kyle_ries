@@ -1,0 +1,11 @@
+@import "brand";
+
+html {
+  border-top: 4px solid $satin;
+  background: url(image-path("black-linen.png"));
+}
+
+body {
+  margin-left: 2%;
+  margin-right: 2%;
+}
