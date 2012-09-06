@@ -3,7 +3,7 @@
     = link_to "Kyle Ries", root_path, id: "logo"
     %nav
       %ul#main
-        %li= link_to "Contact", "#", id: "contactlink"
+        %li= link_to "Contact", '#', id: "contactlink"
         %li= link_to "About", about_path
         %li= link_to "Profiles", profiles_path
   %h1.mid RAILS DEVELOPER+
@@ -43,9 +43,6 @@
   
     = submit_tag("Send", id: "submits")
 
-    #back
-      %h4 Thanks for your message!
-
 :javascript
   var submit = document.getElementById("submits");  
   var form = document.querySelector("form");
@@ -53,7 +50,7 @@
   var h3 = document.querySelector("h3");
   var contactlink = document.getElementById("contactlink");
         
-  submit.addEventListener("click", rotateForm, false);
+  submit.addEventListener("click", formOut, false);
   h3.addEventListener("click", formOut, false);
   contactlink.addEventListener("click", formOut, false);
   form.addEventListener("submit", formSubmit, false);
@@ -77,17 +74,9 @@
       h3.innerHTML = "Contact me!";
     }
   }
-  
-  function rotateForm() {
-    if(Modernizr.cssanimations && Modernizr.csstransforms3d) {
-    form.setAttribute("class","form-rotate");
-    form.style.left = "0rem";
-    } else {
-      back.style.zIndex = "5";
-    }       
-  }
-  
+    
   function formSubmit(e) {
+    h3.innerHTML = "Thank you!";
     e.preventDefault();
     
     //submit form via Ajax

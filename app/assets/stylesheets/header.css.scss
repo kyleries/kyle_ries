@@ -13,15 +13,15 @@ header {
   #logo {
     font-family: $heading-font;
     font-size: 2em;
-    color: $white;
     text-decoration: none;
     letter-spacing: 0.2em;
+    color: $silver;
   }
 
   h1 {
     text-align: center;
     color: $white;
-    font-size: 5.5em;
+    font-size: 5em;
     font-family: $heading-font;
     margin: 0.5em auto;
     margin-top: 25px;
@@ -30,7 +30,7 @@ header {
   h2 {
     text-align: center;
     color: $white;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: $accent-font;
     margin-top: -35px;
   }
@@ -68,19 +68,14 @@ header {
   color: $silver;
   margin-left: 2.5em;
   margin-top: 0.3em;
-  padding: 5px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  background-image: -moz-linear-gradient(left, #ff9c45, transparent);
-  background-image: -ms-linear-gradient(left, #ff9c45, transparent);
-  background-image: -o-linear-gradient(left, #ff9c45, transparent);
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff9c45), to(transparent));
-  background-image: -webkit-linear-gradient(left, #ff9c45, transparent);
-  background-image: linear-gradient(left, #ff9c45, transparent);
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+  padding: 8px;
+  outline: 1px dashed #98abb9;
+  outline-offset: -5px;
+  background-color: #556068; 
+  /*shadow*/
+  -webkit-box-shadow: 2px 2px 2px #000;
+  -moz-box-shadow: 2px 2px 2px #000;
+  box-shadow: 2px 2px 2px #000;
 
 }
 
@@ -139,7 +134,7 @@ header {
     transform-style: preserve-3d;
   }
 
-  #front,#back {
+  #front {
     position: absolute;
     top: 200px;
     left: 0;
@@ -231,49 +226,6 @@ header {
     z-index: 5;
   }
 
-  #back {
-    -webkit-transform: rotateX(180deg);
-    -moz-transform: rotateX(180deg);
-    -ms-transform: rotateX(180deg);
-    -o-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-  }
-
-  @-webkit-keyframes form-rotate {
-    from {-webkit-transform: rotateX(0deg);}
-    to {-webkit-transform: rotateX(180deg);}
-  }
-
-  @-moz-keyframes form-rotate {
-    from { -moz-transform: rotateX(0deg);}
-    to {-moz-transform: rotateX(180deg);}
-  }
-
-  @-ms-keyframes form-rotate {
-    from { -ms-transform: rotateX(0deg); }
-    to { -ms-transform: rotateX(180deg);}
-  }
-
-  @-o-keyframes form-rotate {
-    from { -o-transform: rotateX(0deg); }
-    to { -o-transform: rotateX(180deg); }
-  }
-
-
-  @keyframes form-rotate {
-    from {-transform: rotateX(0deg);}
-    to {-transform: rotateX(180deg);}
-  }
-
-        
-  .form-rotate {
-    -webkit-animation: form-rotate 1s forwards;
-    -moz-animation: form-rotate 1s forwards;
-    -ms-animation: form-rotate 1s forwards;
-    -o-animation: form-rotate 1s forwards;
-    animation: form-rotate 1s forwards;
-  }
-
   @-webkit-keyframes form-out {
     from { -webkit-transform: translateX(0rem); }
     to { -webkit-transform: translateX(22rem); }
@@ -350,7 +302,7 @@ header {
 
   /* || modernizr fallbacks */
 
-  .no-cssgradients #front, .no-cssgradients #back {
+  .no-cssgradients #front {
     background-color: #009999;
   }
 
