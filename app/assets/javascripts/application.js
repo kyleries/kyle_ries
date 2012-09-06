@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.iosslider.min
+//= require modernizr-2.5.3
 //= require_tree .

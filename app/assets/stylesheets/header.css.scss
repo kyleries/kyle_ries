@@ -61,3 +61,303 @@ header {
     }
   }
 }
+
+#html5box {
+  display: none;
+  width: 800px;
+  color: $silver;
+  margin-left: 2.5em;
+  margin-top: 0.3em;
+  padding: 5px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-image: -moz-linear-gradient(left, #ff9c45, transparent);
+  background-image: -ms-linear-gradient(left, #ff9c45, transparent);
+  background-image: -o-linear-gradient(left, #ff9c45, transparent);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff9c45), to(transparent));
+  background-image: -webkit-linear-gradient(left, #ff9c45, transparent);
+  background-image: linear-gradient(left, #ff9c45, transparent);
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+
+}
+
+
+  /* || typography */
+
+  form h3 {
+    font-family: $accent-font;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+    width: 140px;
+    width: 14rem;
+  }
+
+  form h4 {
+    font-family: $accent-font;
+    letter-spacing: 0.5px;
+    letter-spacing: 0.05rem;
+    font-size: 30px;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  form h3, form h4 {
+    text-shadow: 1px 1px 1px white;
+  }
+
+  label, input, textarea {
+    font-family: $body-font;
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+
+  /* || form layout and styling */
+
+  form {
+    position:absolute;
+    z-index: 5;
+    top: 1px;
+    top: 1rem;
+    left: -280px;
+    left: -28rem; 
+    width: 200px;
+    width: 20rem;
+    height: 23px;
+    height: 23rem;
+    padding: 30px 30px 50px 30px;
+    padding: 3rem 3rem 5rem 3rem;
+    
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #front,#back {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    
+    width: 200px;
+    width: 20rem;
+    height: 150px;
+    height: 15rem;
+    padding: 30px 60px 50px 60px;
+    padding: 3rem 6rem 5rem 6rem;
+    
+    background: -webkit-linear-gradient(bottom right, rgba(0,153,153,1), rgba(0,153,153,0.5));
+    background: -moz-linear-gradient(bottom right, rgba(0,153,153,1), rgba(0,153,153,0.5));
+    background: -ms-linear-gradient(bottom right, rgba(0,153,153,1), rgba(0,153,153,0.5));
+    background: -o-linear-gradient(bottom right, rgba(0,153,153,1), rgba(0,153,153,0.5));
+    background: linear-gradient(bottom right, rgba(0,153,153,1), rgba(0,153,153,0.5));
+    
+    background-color: white;
+    color: #001F1D;
+    border-radius: 0 2rem 2rem 0;
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0,0,0,0.6);
+    
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+
+  form div {
+    clear: left;
+    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+  }
+
+  input, textarea {
+    width: 180px;
+    width: 18rem;
+    margin-top: 3px;
+    margin-top: 0.3rem;
+    margin-left: 20px;
+    margin-left: 2rem;
+    box-shadow: inset 1px 1px 2px black;
+    padding: 3px 2px 2px 4px;
+    padding: 0.3rem 0.2rem 0.2rem 0.4rem;
+    border: none;
+    border-radius: 1rem; 
+  }
+
+  input[type="submit"] {
+    width: 190px;
+    width: 19rem;
+    margin-left: 20px;
+    margin-left: 2rem;
+    margin-top: 8px;
+    margin-top: 0.8rem;
+    padding: 7px;
+    padding: 0.7rem;
+    
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    background: -o-linear-gradient(top, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    background: linear-gradient(top, rgba(255,255,255,0.3), rgba(255,255,255,0));
+     
+    box-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  /* || transforms, transitions, animations */
+
+  h3 {
+    position: absolute;
+    -webkit-transform: rotate(90deg) translate(2.5rem,-17rem);
+    -moz-transform: rotate(90deg) translate(2.5rem,-17rem);
+    -ms-transform: rotate(90deg) translate(2.5rem,-17rem);
+    -o-transform: rotate(90deg) translate(2.5rem,-18rem);
+    transform: rotate(90deg) translate(2.5rem,-17rem);
+  }
+
+  #front {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    
+    z-index: 5;
+  }
+
+  #back {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  @-webkit-keyframes form-rotate {
+    from {-webkit-transform: rotateX(0deg);}
+    to {-webkit-transform: rotateX(180deg);}
+  }
+
+  @-moz-keyframes form-rotate {
+    from { -moz-transform: rotateX(0deg);}
+    to {-moz-transform: rotateX(180deg);}
+  }
+
+  @-ms-keyframes form-rotate {
+    from { -ms-transform: rotateX(0deg); }
+    to { -ms-transform: rotateX(180deg);}
+  }
+
+  @-o-keyframes form-rotate {
+    from { -o-transform: rotateX(0deg); }
+    to { -o-transform: rotateX(180deg); }
+  }
+
+
+  @keyframes form-rotate {
+    from {-transform: rotateX(0deg);}
+    to {-transform: rotateX(180deg);}
+  }
+
+        
+  .form-rotate {
+    -webkit-animation: form-rotate 1s forwards;
+    -moz-animation: form-rotate 1s forwards;
+    -ms-animation: form-rotate 1s forwards;
+    -o-animation: form-rotate 1s forwards;
+    animation: form-rotate 1s forwards;
+  }
+
+  @-webkit-keyframes form-out {
+    from { -webkit-transform: translateX(0rem); }
+    to { -webkit-transform: translateX(22rem); }
+  }
+
+  @-moz-keyframes form-out {
+    from { -moz-transform: translateX(0rem);}
+    to {-moz-transform: translateX(22rem);}
+  }
+
+  @-ms-keyframes form-out {
+    from { -ms-transform: translateX(0rem); }
+    to { -ms-transform: translateX(22rem);}
+  }
+
+  @-o-keyframes form-out {
+    from {-o-transform: translateX(0rem);}
+    to {-o-transform: translateX(22rem);}
+  }
+
+  @keyframes form-out {
+    from {transform: translateX(0rem);}
+    to {transform: translateX(22rem);}
+  }
+
+
+  .form-out {
+    -webkit-animation: form-out 1s forwards;
+    -moz-animation: form-out 1s forwards;
+    -ms-animation: form-out 1s forwards;
+    -o-animation: form-out 1s forwards;
+    animation: form-out 1s forwards;
+  }
+
+  @-webkit-keyframes form-in {
+    from {-webkit-transform: translateX(22rem);}
+    to {-webkit-transform: translateX(0rem);}
+  }
+
+  @-moz-keyframes form-in {
+    from {-moz-transform: translateX(22rem);}
+    to {-moz-transform: translateX(0rem);}
+  }
+
+  @-ms-keyframes form-in {
+    from {-ms-transform: translateX(22rem);}
+    to {-ms-transform: translateX(0rem);}
+  }
+
+  @-o-keyframes form-in {
+    from {-o-transform: translateX(22rem);}
+    to {-o-transform: translateX(0rem);}
+  }
+
+  @keyframes form-in {
+    from {transform: translateX(22rem);}
+    to {transform: translateX(0rem);}
+  }
+
+
+  .form-in {
+    -webkit-animation: form-in 1s forwards;
+    -moz-animation: form-in 1s forwards;
+    -ms-animation: form-in 1s forwards;
+    -o-animation: form-in 1s forwards;
+    animation: form-in 1s forwards;
+  }
+
+  /* || set pointers */
+
+  h3:hover, input[type="submit"]:hover {
+    cursor: pointer;
+  }
+
+  /* || modernizr fallbacks */
+
+  .no-cssgradients #front, .no-cssgradients #back {
+    background-color: #009999;
+  }
+
+  .no-csstransforms h3 {
+    position: static;
+  }
+
+  .no-csstransforms .extended-info {
+    display: none;
+  }

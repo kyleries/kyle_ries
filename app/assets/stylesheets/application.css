@@ -13,7 +13,8 @@
  *= require universal
  *= require header
  *= require container
- *= require contact
+ *= require home
+ *= require about
  *= require profiles
  *= require footer
  *= require_self

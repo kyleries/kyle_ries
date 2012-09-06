@@ -3,17 +3,92 @@
     = link_to "Kyle Ries", root_path, id: "logo"
     %nav
       %ul#main
-        %li= link_to "Contact", contact_path
-        %li= link_to "Skills", skills_path
+        %li= link_to "Contact", "#", id: "contactlink"
+        %li= link_to "About", about_path
         %li= link_to "Profiles", profiles_path
-  %h1.mid RAILS DEVELOPER +
+  %h1.mid RAILS DEVELOPER+
   %h2 Knowledge, experience, and expertise in the rest of the Rails Ecosystem.
   .bottom
     %ul#skills
-      %li= link_to image_tag( 'html5.png'), skills_path
-      %li= link_to image_tag( 'haml.png'), skills_path
-      %li= link_to image_tag( 'rspec.png'), skills_path
-      %li= link_to image_tag( 'sass.png'), skills_path
-      %li= link_to image_tag( 'git.png'), skills_path
-      %li= link_to image_tag( 'heroku.png'), skills_path
-      %li= link_to image_tag( 'coffee-script.png'), skills_path
+      %li= image_tag "html5.png", id: "html5"
+      %li= image_tag('haml.png')
+      %li= image_tag( 'rspec.png')
+      %li= image_tag( 'sass.png')
+      %li= image_tag( 'git.png')
+      %li= image_tag( 'heroku.png')
+      %li= image_tag( 'coffee-script.png')
+    %aside#html5box
+      %p HTML5 is one of the most exciting advances in the Web today. Ensuring that the web is a universe of semantic material means a better internet for everyone.
+:javascript
+  $("#html5").click(function () {
+      if ($("#html5box").is(":hidden")) {
+        $("#html5box").slideDown("slow");
+      } else {
+    $("#html5box").hide("slow");
+    }
+  });
+
+= form_tag root_path, class: " ", id: "feedback-form" do
+  
+  #front
+    %h3 Contact me!
+
+    = text_field_tag(:name, nil, placeholder: "Enter Your Name")
+
+    = email_field(:email, nil, placeholder: "Enter Your Email Address")
+
+    = telephone_field(:phone, nil, placeholder: "Enter Your Phone Number")
+
+    = text_area_tag(:message, nil, placeholder: "Enter Your Message. Something like: 'Kyle, you are the best. Let's work together!' would suffice.", size: "24x6")
+  
+    = submit_tag("Send", id: "submits")
+
+    #back
+      %h4 Thanks for your message!
+
+:javascript
+  var submit = document.getElementById("submits");  
+  var form = document.querySelector("form");
+  var back = document.getElementById("back");
+  var h3 = document.querySelector("h3");
+  var contactlink = document.getElementById("contactlink");
+        
+  submit.addEventListener("click", rotateForm, false);
+  h3.addEventListener("click", formOut, false);
+  contactlink.addEventListener("click", formOut, false);
+  form.addEventListener("submit", formSubmit, false);
+  
+  function formOut() {
+    if(form.className===" " || form.className==="form-in") {
+      if(Modernizr.cssanimations) {
+        form.setAttribute("class","form-out");           
+      } else {
+        form.setAttribute("class","form-fallback");
+        form.style.left = "0rem";
+      }
+      h3.innerHTML = "Hide contact form!";
+    } else {
+      if(Modernizr.cssanimations) {
+        form.setAttribute("class","form-in");
+      } else {
+        form.setAttribute("class","");
+        form.style.left = "-22rem";
+      }
+      h3.innerHTML = "Contact me!";
+    }
+  }
+  
+  function rotateForm() {
+    if(Modernizr.cssanimations && Modernizr.csstransforms3d) {
+    form.setAttribute("class","form-rotate");
+    form.style.left = "0rem";
+    } else {
+      back.style.zIndex = "5";
+    }       
+  }
+  
+  function formSubmit(e) {
+    e.preventDefault();
+    
+    //submit form via Ajax
+  }

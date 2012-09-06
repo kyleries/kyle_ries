@@ -1,1 +1,11 @@
 @import "brand";
+
+footer {
+	border-top: 1px solid $satin;
+	text-align: right;
+	margin-top: 25px;
+	font-family: $body-font;
+	color: $white;
+	padding: 10px;
+}
+

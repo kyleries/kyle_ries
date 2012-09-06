@@ -4,7 +4,7 @@ KyleRies::Application.routes.draw do
 
   match '/contact', to: 'static_pages#contact'
   match '/profiles', to: 'static_pages#profiles'
-  match '/skills', to: 'static_pages#skills'
+  match '/about', to: 'static_pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
