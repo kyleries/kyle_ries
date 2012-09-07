@@ -1,47 +1,61 @@
 %header
   .top
-    = link_to "Kyle Ries", root_path, id: "logo"
+    = link_to "Kyle Ries", '/', id: "logo"
     %nav
       %ul#main
         %li= link_to "Contact", '#', id: "contactlink"
         %li= link_to "About", about_path
-        %li= link_to "Profiles", profiles_path
   %h1.mid RAILS DEVELOPER+
   %h2 Knowledge, experience, and expertise in the rest of the Rails Ecosystem.
-  .bottom
+  #bottom
     %ul#skills
-      %li= image_tag "html5.png", id: "html5"
-      %li= image_tag('haml.png')
-      %li= image_tag( 'rspec.png')
-      %li= image_tag( 'sass.png')
-      %li= image_tag( 'git.png')
-      %li= image_tag( 'heroku.png')
-      %li= image_tag( 'coffee-script.png')
-    %aside#html5box
-      %p HTML5 is one of the most exciting advances in the Web today. Ensuring that the web is a universe of semantic material means a better internet for everyone.
+      %li#1= image_tag "html5.png"
+      %li#2= image_tag "haml.png"
+      %li#3= image_tag "rspec.png"
+      %li#4= image_tag "sass.png"
+      %li#5= image_tag "git.png"
+      %li#6= image_tag "heroku.png"
+      %li#7= image_tag "coffee-script.png"
+    %aside#1.slidebox
+      %p #{image_tag "HTML5_Logo_512.png", size: "50x50"} HTML5 is the next generation markup language. I love HTML5s rich capabilities and semantic roots. Rails supports HTML by default, thereby making my life happy. Future proofing is impossible, but to the extent that it can be mitigated, HTML5 is a great tool to have.
+    %aside#2.slidebox
+      %p #{image_tag "hamllogo.gif", size: "50x50"} HAML brings beauty back to the world of markup and templating. I use HAML in favor of ERB to make the markup more legible and easier to maintain. I just never became really quick typing <%= =>, so HAML saves me time.
+    %aside#3.slidebox
+      %p #{image_tag "rspec_logo.png", size: "50x50"} RSPEC makes testing...fun! I'm a huge proponent of the "Red, Green, Refactor" development cycle, and RSPEC and friends (Guard, Spork) bring a sense of gamification to the world of development.
+    %aside#4.slidebox
+      %p #{image_tag "Sass_Logo.gif", size: "50x50"} SASS is to CSS what HAML is to HTML, but on steroids. The ability to define variables, next rules, and leverage mix-ins means less code and more logic. For a guy like me, that is music to my ears.
+    %aside#5.slidebox
+      %p #{image_tag "github_logo.png", size: "50x50"} GitHub is the de facto choice for Rails developers due to it's ease of use and intelligent design. I favor GitHub for development, but am able to adapt to whichever versioning system is preferred.
+    %aside#6.slidebox
+      %p #{image_tag "heroku-logo.png", size: "50x50"} Heroku makes production deployment a breeze for Rails Developers. I can commit to having your web app up and running on day one with this set-up. This is preferable for me so I can demonstrate the app to end users from a 'live' URL to get feedback ASAP.
+    %aside#7.slidebox
+      %p #{image_tag "coffeescript_logo.png", size: "50x50"} CoffeeScript completes my trifecta of abstraction languages (SASS and HAML being the other two). Here again, we see a reduction of punctuation in favor of logical structurining, speeding up development.
+
 :javascript
-  $("#html5").click(function () {
-      if ($("#html5box").is(":hidden")) {
-        $("#html5box").slideDown("slow");
+  $("li").click(function(){
+      var x = this.id;
+      if ($("aside[id=" + x +"]").is(":hidden")) {
+        $(".slidebox").hide("slow");
+        $("aside[id=" + x +"]").slideDown("slow");
       } else {
-    $("#html5box").hide("slow");
+    $("aside[id=" + x +"]").hide("slow");
     }
   });
 
-= form_tag root_path, class: " ", id: "feedback-form" do
+= form_for @message, remote: true, url: {action: "create"}, html: {class: " ", id: "feedback-form"} do |f|
   
   #front
     %h3 Contact me!
 
-    = text_field_tag(:name, nil, placeholder: "Enter Your Name")
+    = f.text_field :name, placeholder: "Enter Your Name"
 
-    = email_field(:email, nil, placeholder: "Enter Your Email Address")
+    = f.email_field :email, placeholder: "Enter Your Email Address"
 
-    = telephone_field(:phone, nil, placeholder: "Enter Your Phone Number")
+    = f.telephone_field :phone, placeholder: "Enter Your Phone Number"
 
-    = text_area_tag(:message, nil, placeholder: "Enter Your Message. Something like: 'Kyle, you are the best. Let's work together!' would suffice.", size: "24x6")
+    = f.text_area :message, placeholder: "Enter Your Message. Something like: 'Kyle, you are the best. Let's work together!' would suffice.", size: "24x6"
   
-    = submit_tag("Send", id: "submits")
+    = f.submit "Send", id: "submits"
 
 :javascript
   var submit = document.getElementById("submits");  
@@ -77,7 +91,6 @@
     
   function formSubmit(e) {
     h3.innerHTML = "Thank you!";
-    e.preventDefault();
     
     //submit form via Ajax
   }
