@@ -1,9 +1,11 @@
 %header
   .top
-    = link_to "Kyle Ries", '/', id: "logo"
+    = link_to "Kyle", '/', id: "logo"
+    = link_to "Ries", '/', id: "logo2"
     %nav
       %ul#main
         %li= link_to "Contact", '#', id: "contactlink"
+        |
         %li= link_to "About", about_path
   
 = form_for @message, remote: true, url: {action: "create"}, html: {class: " ", id: "feedback-form"} do |f|
