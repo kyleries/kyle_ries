@@ -1,18 +1,5 @@
 @font-face{
     font: {
-       family: 'Days';
-       weight: 'normal';
-       style: 'normal';
-    } 
-	src: asset-url('days.eot', font);
-	src: asset-url('days.eot?#iefix', font) format('embedded-opentype'),
-	     asset-url('days.woff', font) format('woff'),
-	     asset-url('days.ttf', font) format('truetype'),
-	     asset-url('days.svg#webfont', font) format('svg');
-}
-
-@font-face{
-    font: {
        family: 'Vera';
        weight: 'normal';
        style: 'normal';
@@ -22,6 +9,19 @@
 	     asset-url('vera.woff', font) format('woff'),
 	     asset-url('vera.ttf', font) format('truetype'),
 	     asset-url('vera.svg#webfont', font) format('svg');
+}
+
+@font-face{
+    font: {
+       family: 'Typewriter';
+       weight: 'normal';
+       style: 'normal';
+    } 
+	src: asset-url('typewriter.eot', font);
+	src: asset-url('typewriter.eot?#iefix', font) format('embedded-opentype'),
+	     asset-url('typewriter.woff', font) format('woff'),
+	     asset-url('typewriter.ttf', font) format('truetype'),
+	     asset-url('typewriter.svg#webfont', font) format('svg');
 }
 
 @font-face{
@@ -37,7 +37,6 @@
 	     asset-url('bebas.svg#webfont', font) format('svg');
 }
 
-$heading-font: "Days", 'Verdana', 'Arial', sans-serif;
 $accent-font: "Bebas", 'Georgia', "Times New Roman", sans-serif;
 $body-font: "Vera", 'Times New Roman', 'Times', serif;
 

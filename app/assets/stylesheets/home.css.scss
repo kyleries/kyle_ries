@@ -107,7 +107,7 @@
 
 	.iosSlider .slider .item .title span {
 		color: #fff;
-		font: bold 30px/30px "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font: bold 30px/30px $accent-font,Helvetica,Arial,sans-serif;
 		text-shadow: 0 -1px 1px #000;
 	}
 
@@ -120,14 +120,16 @@
 
 	.iosSlider .slider .item .desc span {
 		color: #fff;
-		font: normal 16px/22px "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font: normal 16px/22px $body-font,Helvetica,Arial,sans-serif;
 		text-shadow: 0 -1px 1px #000;
 	}
 
-	.iosSlider .slider .item .button {
+	.iosSlider .slider .item .button1 {
 		position: absolute;
-		right: 20px;
-		bottom: 20px;
+		text-align: center;
+		left: 0px;
+		bottom: 0px;
+		width: 40%;
 		padding: 0 10px 0 10px;
 		margin: 10px 0 0 0;
 		border: 1px solid #000;
@@ -152,10 +154,52 @@
 
 	}
 
-	.iosSlider .slider .item .button span {
+	.iosSlider .slider .item .button1 span a {
 		color: black;
-		font: normal 14px/30px Helvetica,Arial,sans-serif;
+		font: normal 1.5em/1.6em $accent-font,Arial,sans-serif;
+		text-decoration: none;
 		text-shadow: 0 1px 1px #fff;
+		a:visited {
+		  color: #3d3d3d;
+		  text-decoration: none;
+		}
+	}
+
+	.iosSlider .slider .item .button2 {
+		position: absolute;
+		text-align: center;
+		right: 0px;
+		bottom: 0px;
+		width: 40%;
+		padding: 0 10px 0 10px;
+		margin: 10px 0 0 0;
+		border: 1px solid #000;
+		cursor: pointer;
+		-moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+		background: rgb(226,226,226); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+		&:hover {
+		  -moz-box-shadow: 0px 0px 10px #fdff4d;
+		  -webkit-box-shadow: 0px 0px 10px #fdff4d;
+		  box-shadow: 0px 0px 10px #fdff4d;
+		  cursor: pointer;
+		}
+
+	}
+
+	.iosSlider .slider .item .button2 span a {
+		color: black;
+		font: normal 1.5em/1.6em $accent-font,Arial,sans-serif;
+		text-shadow: 0 1px 1px #fff;
+		text-decoration: none;
 		a:visited {
 		  color: #3d3d3d;
 		}
