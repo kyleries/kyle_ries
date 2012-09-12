@@ -4,7 +4,7 @@
 	background: url(image-path("natural_paper.png")) repeat 0 0;
 	width: 80%;
 	margin: auto;
-	margin-top: 3em;
+	margin-top: 0em;
 	-webkit-box-shadow: inset 0px 0px 6px 4px rgba(35, 35, 35, .5);
     box-shadow: inset 0px 0px 6px 4px rgba(35, 35, 35, .5);
   h1 {
@@ -13,6 +13,7 @@
     font-size: 4em;
     font-family: $accent-font;
     margin-bottom: 15px;
+    margin-top: 0em;
   }
 
   h6 {
@@ -20,7 +21,7 @@
     font-size: 2em;
     font-family: $body-font;
     margin: 0;
-    margin-left: 0.4em;
+    margin-left: 1.1em;
 
   }
 
@@ -28,15 +29,15 @@
   h4 {
     text-align: left;
     color: $black;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: $accent-font;
-    margin: 0.5em;
+    margin: 0.3em;
     padding-top: 0.5em;
     border-bottom: 1px solid $satin;
     clear: both;
 
     &:last-child {
-    	margin-bottom: 8em;
+    	margin-bottom: 2em;
     }
   }
 
@@ -47,6 +48,9 @@
     li {
       padding-right: 10px;
       cursor: pointer;
+      margin-bottom: 3.7em;
+
+      &:last-child { margin-bottom: 1.5em; }
     }
   }	
 
@@ -55,11 +59,11 @@
   }
 
   section p {
-  	display: inline;
-	color: black;
-	font: normal 1.5em/1.6em "Typewriter",Arial,sans-serif;
+	font: normal 2em/1.3em "Typewriter",Arial,sans-serif;
 	text-shadow: 0 1px 1px #fff;
-	margin: 1em;
-	padding-right: 5em;
+  text-align: justify;
+  margin: 0.5em;
   }
 }
+
+#jcdavis, #stairmeister, #bloominations, #aqhi { height: 50px;}
