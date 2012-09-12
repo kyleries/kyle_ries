@@ -19,7 +19,6 @@ header {
       font-size: 2em;
       font-size: 2rem;
       ul#main {
-        float: right;
         list-style: none;
         margin: auto;
         margin-top: 10px;
@@ -39,15 +38,16 @@ header {
 
   #logo, #logo2 {
     font-family: $accent-font;
-    font-size: 3em;
-    font-size: 3rem;
+    font-size: 3.5em;
+    font-size: 3.5rem;
     text-decoration: none;
-    letter-spacing: 0.2em;
+    letter-spacing: -0.02em;
     color: $black;
   }
 
   #logo2 {
     color: gray;
+    padding-right: 2em;
   }
 }
 
