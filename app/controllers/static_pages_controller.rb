@@ -21,4 +21,8 @@ class StaticPagesController < ApplicationController
   def about
     @message = Message.new
   end
+
+  def briefs
+    @message = Message.new
+  end
 end

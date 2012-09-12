@@ -1,0 +1,65 @@
+@import "brand";
+
+.briefs {
+	background: url(image-path("natural_paper.png")) repeat 0 0;
+	width: 80%;
+	margin: auto;
+	margin-top: 3em;
+	-webkit-box-shadow: inset 0px 0px 6px 4px rgba(35, 35, 35, .5);
+    box-shadow: inset 0px 0px 6px 4px rgba(35, 35, 35, .5);
+  h1 {
+    text-align: center;
+    color: $black;
+    font-size: 4em;
+    font-family: $accent-font;
+    margin-bottom: 15px;
+  }
+
+  h6 {
+    color: grey;
+    font-size: 2em;
+    font-family: $body-font;
+    margin: 0;
+    margin-left: 0.4em;
+
+  }
+
+
+  h4 {
+    text-align: left;
+    color: $black;
+    font-size: 1em;
+    font-family: $accent-font;
+    margin: 0.5em;
+    padding-top: 0.5em;
+    border-bottom: 1px solid $satin;
+    clear: both;
+
+    &:last-child {
+    	margin-bottom: 8em;
+    }
+  }
+
+  ul {
+    margin: 1em;
+    list-style: none;
+    float: left;
+    li {
+      padding-right: 10px;
+      cursor: pointer;
+    }
+  }	
+
+  #brieftext {
+  		float: right;
+  }
+
+  section p {
+  	display: inline;
+	color: black;
+	font: normal 1.5em/1.6em "Typewriter",Arial,sans-serif;
+	text-shadow: 0 1px 1px #fff;
+	margin: 1em;
+	padding-right: 5em;
+  }
+}

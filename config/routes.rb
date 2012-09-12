@@ -3,8 +3,9 @@ KyleRies::Application.routes.draw do
   match '/' => 'static_pages#home', :as => '/', :via => :get
   match '/' => 'static_pages#create', :as => '/', :via => :post
 
-  match '/contact', to: 'static_pages#contact'
-  match '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
+  get '/about', to: 'static_pages#about'
+  get '/briefs', to: 'static_pages#briefs'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -5,44 +5,7 @@
       %ul#main
         %li= link_to "Contact", '#', id: "contactlink"
         %li= link_to "About", about_path
-  %h1.mid I'm A Web Expert.
-  %h2 Specialized Skills in Ruby on Rails Web Development +
-  %h2 Knowledge, experience, and expertise in the rest of the Web Ecosystem.
-  #bottom
-    %ul#skills
-      %li#1= image_tag "rails1.png"
-      %li#2= image_tag "html5.png"
-      %li#3= image_tag "rspec.png"
-      %li#4= image_tag "sass.png"
-      %li#5= image_tag "git.png"
-      %li#6= image_tag "heroku.png"
-      %li#7= image_tag "coffee-script.png"
-    %aside#1.slidebox
-      %p #{link_to (image_tag "rails.png", size: "50x55"), "http://rubyonrails.org/", target: "blank"} Ruby on Rails, particularly the latest incarnation, is one of the biggest enablers of Agile web development. From Active Record's database abstraction layer to the RESTful routing, developing in Rails is a developer's best friend.
-    %aside#2.slidebox
-      %p #{link_to (image_tag "HTML5_Logo_512.png", size: "50x50"), "http://www.w3.org/html/logo/#the-technology", target: "blank"} #{link_to (image_tag "hamllogo.gif", size: "50x50", style: "float: right;"), "http://haml.info/", target: "blank"} HTML5 is the next generation markup language and HAML brings beauty to the world of markup and templating. Rails supports HTML5 by default. I use HAML in favor of ERB to make the markup more legible and easier to maintain. 
-    %aside#3.slidebox
-      %p #{link_to (image_tag "rspec_logo.png", size: "50x50"), "http://rspec.info/", target: "blank"} RSPEC makes testing...fun! I'm a huge proponent of the "Red, Green, Refactor" development cycle, and RSPEC and friends (Guard, Spork) bring a sense of gamification to the world of development.
-    %aside#4.slidebox
-      %p #{link_to (image_tag "css3_logo.png", size: "55x60"), "http://www.css3.info/", target: "blank"} #{link_to (image_tag "Sass_Logo.gif", size: "55x60", style: "float: right;"), "http://sass-lang.com/", target: "blank"} CSS3 enables apps to do useful things with less reliance on plugins like JQuery or {link_to "Flash", "http://www.zdnet.com/blog/networking/flash-is-dead-long-live-html5/1633"}. SASS is to CSS as HAML is to HTML. Variables, nested rules, and mix-ins means less code and more logic. 
-    %aside#5.slidebox
-      %p #{link_to (image_tag "github_logo.png", size: "50x50"), "https://github.com/", target: "blank"} GitHub is the de facto choice for Rails developers due to it's ease of use, intelligent design, and vibrant community. I favor GitHub for development, but am able to adapt to whichever versioning system is preferred. 
-    %aside#6.slidebox
-      %p #{link_to (image_tag "heroku-logo.png", size: "50x50"), "http://www.heroku.com/", target: "blank"} Heroku makes production deployment a breeze for Rails Developers. I commit to having your web app up and running on day one (if only the very basics) with this set-up. This way, I can demonstrate the app to end users for early feedback.
-    %aside#7.slidebox
-      %p #{link_to (image_tag "jquery_logo.png"), "http://jquery.com/", target: "blank"} #{link_to (image_tag "coffeescript_logo.png", size: "50x50", style: "float: right;"), "http://coffeescript.org/", target: "blank"} The jQuery and CoffeeScript combo complete my trifecta of abstraction languages (SASS and HAML being the other two). Here again, we see a reduction of punctuation in favor of logical structuring, speeding up development.
-
-:javascript
-  $("li").click(function(){
-      var x = this.id;
-      if ($("aside[id=" + x +"]").is(":hidden")) {
-        $(".slidebox").hide("slow");
-        $("aside[id=" + x +"]").slideDown("slow");
-      } else {
-    $("aside[id=" + x +"]").hide("slow");
-    }
-  });
-
+  
 = form_for @message, remote: true, url: {action: "create"}, html: {class: " ", id: "feedback-form"} do |f|
   
   #front

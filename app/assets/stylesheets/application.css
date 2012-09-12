@@ -9,13 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require normalize
+ *= require container
  *= require brand
  *= require universal
  *= require header
- *= require container
  *= require home
  *= require about
- *= require profiles
+ *= require briefs
  *= require footer
  *= require_self
  */
