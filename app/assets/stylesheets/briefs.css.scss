@@ -48,9 +48,9 @@
     li {
       padding-right: 10px;
       cursor: pointer;
-      margin-bottom: 3.7em;
+      margin-bottom: 1.5em;
 
-      &:last-child { margin-bottom: 1.5em; }
+      &:last-child { margin-bottom: 0.5em; }
     }
   }	
 
@@ -59,7 +59,7 @@
   }
 
   section p {
-	font: normal 2em/1.3em "Typewriter",Arial,sans-serif;
+	font: normal 1.8em/1.3em "Typewriter",Arial,sans-serif;
 	text-shadow: 0 1px 1px #fff;
   text-align: justify;
   margin: 0.5em;
